@@ -7,7 +7,7 @@ target_include_directories(UNISOUND PUBLIC
 	"${KWD_SOURCE_DIR}/include" 
 	"${UNISOUND_SOURCE_DIR}/include")
 
-target_link_libraries(UNISOUND KWD AVSCommon "${UNISOUND_KEY_WORD_DETECTOR_LIB_PATH}")
+target_link_libraries(UNISOUND KWD AVSCommon "${UNISOUND_KEY_WORD_DETECTOR_LIB_PATH}/libengine.so")
 
 # install target
 asdk_install()

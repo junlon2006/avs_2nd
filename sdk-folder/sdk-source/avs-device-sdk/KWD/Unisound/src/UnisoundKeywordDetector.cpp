@@ -18,6 +18,8 @@
 #include <AVSCommon/Utils/Logger/Logger.h>
 
 #include "Unisound/UnisoundKeywordDetector.h"
+#include "LinuxAsrFix.h"
+#include "ofa_consts.h"
 
 namespace alexaClientSDK {
 namespace kwd {
@@ -113,23 +115,106 @@ UnisoundKeywordDetector::UnisoundKeywordDetector(
         m_maxSamplesPerPush((audioFormat.sampleRateHz / HERTZ_PER_KILOHERTZ) * msToPushPerIteration.count()) {
 }
 
+static void __unisound_init(const char *resourceFilePath) {
+    char model_path[512];
+    char model_files[512];
+    char domains[128] = {"wakeup"};
+    int rc = -1;
+    printf("%s%d: resourceFilePath=%s\n", __FUNCTION__, __LINE__, resourceFilePath);
+    sprintf(model_path, "%s/models", resourceFilePath);
+    sprintf(model_files, "%s/wakeup.dat", model_path);
+    if (0 != (rc = init(model_path, model_files, 0))) {
+        ACSDK_ERROR(LX("createFailed").d("reason", "initUnisoundEngineFailed"));
+        printf("%s%d: unisound engine init failed[%d]\n", __FUNCTION__, __LINE__, rc);
+        return;
+    }
+    setOptionInt(ASR_SILENCE_HANGOUT_THRESH, 10);
+    setOptionInt(ASR_ENGINE_SET_RESET_FRONTEND_ID, 1);
+    setOptionInt(ASR_ENGINE_SET_FAST_RETURN, 1);
+    setOptionInt(ASR_CONF_OUT_INELIGIBLE, 1);
+    setOptionInt(ASR_ENGINE_SET_TYPE_ID, 2);
+    setOptionInt(ASR_LOG_ID, 1);
+
+    if (0 != (rc = start(domains, 54))) {
+        printf("%s%d: unisound engine start failed[%d]\n", __FUNCTION__, __LINE__, rc);
+    }
+    printf("%s%d: unisound engine init successfully\n", __FUNCTION__, __LINE__);
+    return;
+}
+
 bool UnisoundKeywordDetector::init(const std::string& modelFilePath) {
     m_streamReader = m_stream->createReader(AudioInputStream::Reader::Policy::BLOCKING);
     if (!m_streamReader) {
         ACSDK_ERROR(LX("initFailed").d("reason", "createStreamReaderFailed"));
         return false;
     }
-
+    __unisound_init(modelFilePath.c_str());
     m_isShuttingDown = false;
     m_detectionThread = std::thread(&UnisoundKeywordDetector::detectionLoop, this);
     return true;
 }
 
+static void __recognize_result_parse(char *result, char *keyword, float *score) {
+    char buf[128] = {0};
+    char *tmp = buf;
+    int index = 0;
+    int score_index = 0;
+    int start = 0;
+    char score_buf[16] = {0};
+    while (*result != '\0') {
+        if (*result != ' ' &&
+            *result != '\t' &&
+            *result != '\n') {
+            tmp[index++] = *result;
+        }
+        result++;
+    }
+    index = 0;
+    tmp = buf;
+    while (*tmp != '\0') {
+        if (*(tmp + 1) != '\0' && *tmp == '>' && *(tmp+1) != '<') {
+            start++;
+            tmp++;
+            continue;
+        }
+        if (start == 1 && *tmp == '<') {
+            start++;
+        }
+        if (start == 1) {
+        keyword[index++] = *tmp;
+        }
+        if (start == 3 && *tmp != '>')  {
+          score_buf[score_index++] = *tmp;
+        }
+        tmp++;
+    }
+    keyword[index] = '\0';
+    *score = atof(score_buf);
+    printf("keyword=%s, score=%f\n", keyword, *score);
+    return;
+}
+
+static char* __unisound_recognize(char *buf, int len) {
+    char *result = nullptr;
+    float score;
+    static char keyword[64] = {0};
+    int ret = 0;
+    ret = recognize(buf, len * 2);
+    if (2 == ret) {
+        result = getResult();
+        __recognize_result_parse(result, keyword, &score);
+        if (-10.0 < score) {
+            return keyword;
+        }
+    }
+    return nullptr;
+}
+
 void UnisoundKeywordDetector::detectionLoop() {
-    m_beginIndexOfStreamReader = m_streamReader->tell();
     notifyKeyWordDetectorStateObservers(KeyWordDetectorStateObserverInterface::KeyWordDetectorState::ACTIVE);
     std::vector<int16_t> audioDataToPush(m_maxSamplesPerPush);
     ssize_t wordsRead;
+    char *keyword = nullptr;
     while (!m_isShuttingDown) {
         bool didErrorOccur = false;
         wordsRead = readFromStream(
@@ -143,10 +228,19 @@ void UnisoundKeywordDetector::detectionLoop() {
             break;
         } else if (wordsRead == AudioInputStream::Reader::Error::OVERRUN) {
         } else if (wordsRead > 0) {
+            if (nullptr != (keyword = __unisound_recognize((char *)audioDataToPush.data(), audioDataToPush.size()))) {
+                UnisoundKeywordDetector* engine = static_cast<UnisoundKeywordDetector*>(this);
+                engine->notifyKeyWordObservers(
+                    engine->m_stream,
+                    keyword,
+                    KeyWordObserverInterface::UNSPECIFIED_INDEX,
+                    m_streamReader->tell());
+            }
         }
     }
     m_streamReader->close();
 }
+
 
 }  // namespace kwd
 }  // namespace alexaClientSDK

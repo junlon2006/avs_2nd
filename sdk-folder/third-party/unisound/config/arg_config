@@ -1,0 +1,13 @@
+{
+  "rasr_white_list": ["暂停", "播放", "继续"],
+  "special_keyword_threshold": [
+  {"type": "delta", "field": "recog", "rec_threshold": "10",  "keyword": ["我要联网","帮我联网"]}
+  ],
+  "scene_threshold": {
+  "basic_wakeup_standard": -10.0,
+  "basic_wakeup_secondary": -10.0,
+  "basic_recog_standard": -16.5,
+  "basic_recog_secondary": -16.5,
+  "basic_recog_timeout_ms": 7000
+  }
+}
