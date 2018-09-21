@@ -10,6 +10,10 @@ if(SENSORY_KEY_WORD_DETECTOR)
     target_link_libraries(KeywordDetectorProvider SENSORY)
 endif()
 
+if(UNISOUND_KEY_WORD_DETECTOR)
+    target_link_libraries(KeywordDetectorProvider UNISOUND)
+endif()
+
 if(KITTAI_KEY_WORD_DETECTOR)
     target_link_libraries(KeywordDetectorProvider KITTAI)
 endif()

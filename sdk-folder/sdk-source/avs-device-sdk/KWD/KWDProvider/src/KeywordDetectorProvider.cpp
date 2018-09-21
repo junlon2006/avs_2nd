@@ -19,6 +19,8 @@
 #include <KittAi/KittAiKeyWordDetector.h>
 #elif KWD_SENSORY
 #include <Sensory/SensoryKeywordDetector.h>
+#elif KWD_UNISOUND
+#include <Unisound/UnisoundKeywordDetector.h>
 #endif
 
 #ifdef KWD_KITTAI
@@ -60,6 +62,14 @@ std::unique_ptr<kwd::AbstractKeywordDetector> KeywordDetectorProvider::create(
         keyWordObservers,
         keyWordDetectorStateObservers,
         pathToInputFolder + "/spot-alexa-rpi-31000.snsr");
+
+#elif defined(KWD_UNISOUND)
+    return kwd::UnisoundKeywordDetector::create(
+        stream,
+        audioFormat,
+        keyWordObservers,
+        keyWordDetectorStateObservers,
+        pathToInputFolder);
 #else
     return nullptr;
 #endif
