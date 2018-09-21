@@ -1,2 +1,0 @@
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar qc libCapabilitiesDelegateTestLib.a  CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableAuthDelegate.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableCapabilityProvider.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableHttpPut.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableMiscStorage.cpp.o
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib libCapabilitiesDelegateTestLib.a

@@ -1,2 +1,0 @@
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar qc libgtest_main.a  CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib libgtest_main.a

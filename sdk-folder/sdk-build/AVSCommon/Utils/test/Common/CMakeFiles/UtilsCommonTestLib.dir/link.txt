@@ -1,2 +1,0 @@
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar qc libUtilsCommonTestLib.a  CMakeFiles/UtilsCommonTestLib.dir/MockMediaPlayer.cpp.o
-/opt/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib libUtilsCommonTestLib.a
