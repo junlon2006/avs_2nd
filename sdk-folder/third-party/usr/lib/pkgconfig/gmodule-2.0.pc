@@ -1,0 +1,14 @@
+prefix=/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/glib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+gmodule_supported=true
+
+Name: GModule
+Description: Dynamic module loader for GLib
+Requires: glib-2.0
+Version: 2.59.0
+Libs: -L${libdir} -Wl,--export-dynamic -lgmodule-2.0 -pthread
+Libs.private: -ldl
+Cflags: -pthread

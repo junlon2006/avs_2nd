@@ -1,0 +1,12 @@
+prefix=/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/glib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GObject
+Description: GLib Type, Object, Parameter and Signal Library
+Requires: glib-2.0
+Version: 2.59.0
+Libs: -L${libdir} -lgobject-2.0
+Libs.private: /home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/libffi/lib/libffi.a
+Cflags:
