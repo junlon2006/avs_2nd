@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/libxml2/lib'
+libdir='/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib'

@@ -97,7 +97,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = arm-unknown-linux-gnu
 bin_PROGRAMS = curl$(EXEEXT)
 #am__append_1 = -DCURL_STATICLIB
 subdir = src
@@ -299,18 +299,18 @@ AUTOHEADER = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third
 AUTOMAKE = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0/missing automake-1.15
 AWK = mawk
 BLANK_AT_MAKETIME = 
-CC = gcc
+CC = arm-linux-gnueabi-gcc-4.7
 CCDEPMODE = depmode=gcc3
 
 # This might hold -Werror
 CFLAGS = -Werror-implicit-function-declaration -O2 -Wno-system-headers 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-nghttp2=/usr/local' '--with-ssl'"
-CPP = gcc -E
-CPPFLAGS = -I/usr/local/include
+CONFIGURE_OPTIONS = " '--host=arm-linux' 'CC=arm-linux-gnueabi-gcc-4.7' 'CXX=arm-linux-gnueabi-g++-4.7' '--prefix=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr' '--with-zlib=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/' 'host_alias=arm-linux'"
+CPP = arm-linux-gnueabi-gcc-4.7 -E
+CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
 CURLVERSION = 7.54.0
-CURL_CA_BUNDLE = "/etc/ssl/certs/ca-certificates.crt"
+CURL_CA_BUNDLE = 
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 
 CURL_DISABLE_FILE = 
@@ -335,7 +335,7 @@ DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
-DUMPBIN = 
+DUMPBIN = :
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -347,8 +347,8 @@ FGREP = /bin/grep -F
 GREP = /bin/grep
 HAVE_GNUTLS_SRP = 
 HAVE_LDAP_SSL = 1
-HAVE_LIBZ = 1
-HAVE_OPENSSL_SRP = 1
+HAVE_LIBZ = 
+HAVE_OPENSSL_SRP = 
 IDN_ENABLED = 
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -356,9 +356,9 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 IPV6_ENABLED = 1
-LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/usr/local/lib
-LIBCURL_LIBS = -lnghttp2 -lssl -lcrypto -lssl -lcrypto -lz
+LD = /usr/arm-linux-gnueabi/bin/ld
+LDFLAGS = 
+LIBCURL_LIBS = 
 LIBMETALINK_CPPFLAGS = 
 LIBMETALINK_LDFLAGS = 
 LIBMETALINK_LIBS = 
@@ -376,7 +376,7 @@ MAKEINFO = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-p
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = /bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = nm
 NMEDIT = 
 # Use the C locale to ensure that only ASCII characters appear in the
 # embedded text.
@@ -399,17 +399,17 @@ PKGADD_NAME = curl - a client that groks URLs
 PKGADD_PKG = HAXXcurl
 PKGADD_VENDOR = curl.haxx.se
 PKGCONFIG = /usr/bin/pkg-config
-RANDOM_FILE = /dev/urandom
+RANDOM_FILE = 
 RANLIB = ranlib
 REQUIRE_LIB_DEPS = no
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-SSL_ENABLED = 1
-SSL_LIBS = -lssl -lcrypto
+SSL_ENABLED = 
+SSL_LIBS = 
 STRIP = strip
-SUPPORT_FEATURES = SSL IPv6 UnixSockets libz NTLM NTLM_WB TLS-SRP HTTP2 HTTPS-proxy
-SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+SUPPORT_FEATURES = IPv6 UnixSockets
+SUPPORT_PROTOCOLS = DICT FILE FTP GOPHER HTTP IMAP POP3 RTSP SMTP TELNET TFTP
 USE_ARES = 
 USE_AXTLS = 
 USE_CYASSL = 
@@ -419,7 +419,7 @@ USE_GNUTLS_NETTLE =
 USE_LIBRTMP = 
 USE_LIBSSH2 = 
 USE_MBEDTLS = 
-USE_NGHTTP2 = 1
+USE_NGHTTP2 = 
 USE_NSS = 
 USE_OPENLDAP = 
 USE_POLARSSL = 
@@ -428,15 +428,15 @@ USE_UNIX_SOCKETS = 1
 USE_WINDOWS_SSPI = 
 VERSION = -
 VERSIONNUM = 073600
-ZLIB_LIBS = -lz
+ZLIB_LIBS = 
 ZSH_FUNCTIONS_DIR = ${prefix}/share/zsh/site-functions
 abs_builddir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0/src
 abs_srcdir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0/src
 abs_top_builddir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0
 abs_top_srcdir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0
 ac_ct_AR = 
-ac_ct_CC = gcc
-ac_ct_DUMPBIN = 
+ac_ct_CC = 
+ac_ct_DUMPBIN = link -dump
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -454,11 +454,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = 
-host_cpu = x86_64
+host = arm-unknown-linux-gnu
+host_alias = arm-linux
+host_cpu = arm
 host_os = linux-gnu
-host_vendor = pc
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -472,7 +472,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -633,8 +633,8 @@ CURL_FILES = $(CURL_CFILES) $(CURLX_CFILES) $(CURL_HFILES)
 
 # CURL_FILES comes from Makefile.inc
 curl_SOURCES = $(CURL_FILES)
-curl_LDADD = $(top_builddir)/lib/libcurl.la   -lssl -lcrypto -lz 
-#curl_LDADD = $(top_builddir)/lib/libcurl.la  -lnghttp2 -lssl -lcrypto -lssl -lcrypto -lz
+curl_LDADD = $(top_builddir)/lib/libcurl.la     
+#curl_LDADD = $(top_builddir)/lib/libcurl.la  
 curl_LDFLAGS = 
 curl_CPPFLAGS = $(AM_CPPFLAGS) $(LIBMETALINK_CPPFLAGS)
 
@@ -2222,17 +2222,17 @@ $(MANPAGE):
 # compressed formats. $(MANPAGE) must be the first dependency so it
 # can be referenced with $< which points to the correct location in
 # the VPATH.
-$(HUGE): $(MANPAGE) $(README) $(MKHELP)
-	echo '#include "tool_setup.h"' > $(HUGE)
-	echo '#ifndef HAVE_LIBZ' >> $(HUGE)
-	$(NROFF) $< | $(PERL) $(MKHELP) $(README) >> $(HUGE)
-	echo '#else' >> $(HUGE)
-	$(NROFF) $< | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
-	echo '#endif /* HAVE_LIBZ */' >> $(HUGE)
-# This generates the tool_hugehelp.c file uncompressed only
-#$(HUGE): $(MANPAGE) $(README) mkhelp.pl
+#$(HUGE): $(MANPAGE) $(README) $(MKHELP)
 #	echo '#include "tool_setup.h"' > $(HUGE)
+#	echo '#ifndef HAVE_LIBZ' >> $(HUGE)
 #	$(NROFF) $< | $(PERL) $(MKHELP) $(README) >> $(HUGE)
+#	echo '#else' >> $(HUGE)
+#	$(NROFF) $< | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
+#	echo '#endif /* HAVE_LIBZ */' >> $(HUGE)
+# This generates the tool_hugehelp.c file uncompressed only
+$(HUGE): $(MANPAGE) $(README) mkhelp.pl
+	echo '#include "tool_setup.h"' > $(HUGE)
+	$(NROFF) $< | $(PERL) $(MKHELP) $(README) >> $(HUGE)
 
 # built-in manual has been disabled, make a blank file
 #$(HUGE):

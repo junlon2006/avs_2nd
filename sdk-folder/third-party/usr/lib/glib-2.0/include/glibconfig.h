@@ -96,7 +96,7 @@ typedef unsigned int guintptr;
 #endif
 
 #define GLIB_MAJOR_VERSION 2
-#define GLIB_MINOR_VERSION 59
+#define GLIB_MINOR_VERSION 58
 #define GLIB_MICRO_VERSION 0
 
 #define G_OS_UNIX

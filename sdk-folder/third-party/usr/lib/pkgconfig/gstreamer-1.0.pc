@@ -1,4 +1,4 @@
-prefix=/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/gstreamer
+prefix=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/gstreamer-1.0

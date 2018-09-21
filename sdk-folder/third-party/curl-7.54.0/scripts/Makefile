@@ -86,7 +86,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = arm-unknown-linux-gnu
 subdir = scripts
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/curl-compilers.m4 \
@@ -146,16 +146,16 @@ AUTOHEADER = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third
 AUTOMAKE = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0/missing automake-1.15
 AWK = mawk
 BLANK_AT_MAKETIME = 
-CC = gcc
+CC = arm-linux-gnueabi-gcc-4.7
 CCDEPMODE = depmode=gcc3
 CFLAGS = -Werror-implicit-function-declaration -O2 -Wno-system-headers
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-nghttp2=/usr/local' '--with-ssl'"
-CPP = gcc -E
-CPPFLAGS = -I/usr/local/include
+CONFIGURE_OPTIONS = " '--host=arm-linux' 'CC=arm-linux-gnueabi-gcc-4.7' 'CXX=arm-linux-gnueabi-g++-4.7' '--prefix=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr' '--with-zlib=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/' 'host_alias=arm-linux'"
+CPP = arm-linux-gnueabi-gcc-4.7 -E
+CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
 CURLVERSION = 7.54.0
-CURL_CA_BUNDLE = "/etc/ssl/certs/ca-certificates.crt"
+CURL_CA_BUNDLE = 
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 
 CURL_DISABLE_FILE = 
@@ -180,7 +180,7 @@ DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
-DUMPBIN = 
+DUMPBIN = :
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -192,8 +192,8 @@ FGREP = /bin/grep -F
 GREP = /bin/grep
 HAVE_GNUTLS_SRP = 
 HAVE_LDAP_SSL = 1
-HAVE_LIBZ = 1
-HAVE_OPENSSL_SRP = 1
+HAVE_LIBZ = 
+HAVE_OPENSSL_SRP = 
 IDN_ENABLED = 
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -201,14 +201,14 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 IPV6_ENABLED = 1
-LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/usr/local/lib
-LIBCURL_LIBS = -lnghttp2 -lssl -lcrypto -lssl -lcrypto -lz
+LD = /usr/arm-linux-gnueabi/bin/ld
+LDFLAGS = 
+LIBCURL_LIBS = 
 LIBMETALINK_CPPFLAGS = 
 LIBMETALINK_LDFLAGS = 
 LIBMETALINK_LIBS = 
 LIBOBJS = 
-LIBS = -lnghttp2 -lssl -lcrypto -lssl -lcrypto -lz
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
@@ -219,7 +219,7 @@ MAKEINFO = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-p
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = /bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = nm
 NMEDIT = 
 NROFF = /usr/bin/nroff
 NSS_LIBS = 
@@ -240,17 +240,17 @@ PKGADD_NAME = curl - a client that groks URLs
 PKGADD_PKG = HAXXcurl
 PKGADD_VENDOR = curl.haxx.se
 PKGCONFIG = /usr/bin/pkg-config
-RANDOM_FILE = /dev/urandom
+RANDOM_FILE = 
 RANLIB = ranlib
 REQUIRE_LIB_DEPS = no
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-SSL_ENABLED = 1
-SSL_LIBS = -lssl -lcrypto
+SSL_ENABLED = 
+SSL_LIBS = 
 STRIP = strip
-SUPPORT_FEATURES = SSL IPv6 UnixSockets libz NTLM NTLM_WB TLS-SRP HTTP2 HTTPS-proxy
-SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+SUPPORT_FEATURES = IPv6 UnixSockets
+SUPPORT_PROTOCOLS = DICT FILE FTP GOPHER HTTP IMAP POP3 RTSP SMTP TELNET TFTP
 USE_ARES = 
 USE_AXTLS = 
 USE_CYASSL = 
@@ -260,7 +260,7 @@ USE_GNUTLS_NETTLE =
 USE_LIBRTMP = 
 USE_LIBSSH2 = 
 USE_MBEDTLS = 
-USE_NGHTTP2 = 1
+USE_NGHTTP2 = 
 USE_NSS = 
 USE_OPENLDAP = 
 USE_POLARSSL = 
@@ -269,7 +269,7 @@ USE_UNIX_SOCKETS = 1
 USE_WINDOWS_SSPI = 
 VERSION = -
 VERSIONNUM = 073600
-ZLIB_LIBS = -lz
+ZLIB_LIBS = 
 
 #***************************************************************************
 #                                  _   _ ____  _
@@ -298,8 +298,8 @@ abs_srcdir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/cu
 abs_top_builddir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0
 abs_top_srcdir = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/curl-7.54.0
 ac_ct_AR = 
-ac_ct_CC = gcc
-ac_ct_DUMPBIN = 
+ac_ct_CC = 
+ac_ct_DUMPBIN = link -dump
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -317,11 +317,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = 
-host_cpu = x86_64
+host = arm-unknown-linux-gnu
+host_alias = arm-linux
+host_cpu = arm
 host_os = linux-gnu
-host_vendor = pc
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -335,7 +335,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local
+prefix = /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -545,14 +545,14 @@ uninstall-am:
 all-local: $(ZSH_COMPLETION_FUNCTION_FILENAME)
 
 $(ZSH_COMPLETION_FUNCTION_FILENAME): zsh.pl
-#	@echo "NOTICE: we can't generate zsh completion when cross-compiling!"
-	@if ! test -x "$(PERL)"; then echo "No perl: can't install zsh.pl"; exit 0; fi
-	$(PERL) $(srcdir)/zsh.pl $(top_builddir)/src/curl$(EXEEXT) > $@
+	@echo "NOTICE: we can't generate zsh completion when cross-compiling!"
+#	@if ! test -x "$(PERL)"; then echo "No perl: can't install zsh.pl"; exit 0; fi
+#	$(PERL) $(srcdir)/zsh.pl $(top_builddir)/src/curl$(EXEEXT) > $@
 
 install-data-local:
-#	@echo "NOTICE: we can't install zsh completion when cross-compiling!"
-	$(MKDIR_P) $(DESTDIR)$(ZSH_FUNCTIONS_DIR)
-	$(INSTALL_DATA) $(ZSH_COMPLETION_FUNCTION_FILENAME) $(DESTDIR)$(ZSH_FUNCTIONS_DIR)/$(ZSH_COMPLETION_FUNCTION_FILENAME)
+	@echo "NOTICE: we can't install zsh completion when cross-compiling!"
+#	$(MKDIR_P) $(DESTDIR)$(ZSH_FUNCTIONS_DIR)
+#	$(INSTALL_DATA) $(ZSH_COMPLETION_FUNCTION_FILENAME) $(DESTDIR)$(ZSH_FUNCTIONS_DIR)/$(ZSH_COMPLETION_FUNCTION_FILENAME)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

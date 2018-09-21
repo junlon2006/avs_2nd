@@ -2,7 +2,7 @@
 /* lib/curl_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Location of default ca bundle */
-#define CURL_CA_BUNDLE "/etc/ssl/certs/ca-certificates.crt"
+/* #undef CURL_CA_BUNDLE */
 
 /* define "1" to use built in CA store of SSL library */
 /* #undef CURL_CA_FALLBACK */
@@ -80,7 +80,7 @@
 #define ENABLE_IPV6 1
 
 /* Define to the type of arg 2 for gethostname. */
-#define GETHOSTNAME_TYPE_ARG2 size_t
+#define GETHOSTNAME_TYPE_ARG2 unsigned int
 
 /* Define to the type qualifier of arg 1 for getnameinfo. */
 #define GETNAMEINFO_QUAL_ARG1 const
@@ -92,7 +92,7 @@
 #define GETNAMEINFO_TYPE_ARG2 socklen_t
 
 /* Define to the type of args 4 and 6 for getnameinfo. */
-#define GETNAMEINFO_TYPE_ARG46 socklen_t
+#define GETNAMEINFO_TYPE_ARG46 size_t
 
 /* Define to the type of arg 7 for getnameinfo. */
 #define GETNAMEINFO_TYPE_ARG7 int
@@ -158,10 +158,10 @@
 #define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the `ENGINE_cleanup' function. */
-#define HAVE_ENGINE_CLEANUP 1
+/* #undef HAVE_ENGINE_CLEANUP */
 
 /* Define to 1 if you have the `ENGINE_load_builtin_engines' function. */
-#define HAVE_ENGINE_LOAD_BUILTIN_ENGINES 1
+/* #undef HAVE_ENGINE_LOAD_BUILTIN_ENGINES */
 
 /* Define to 1 if you have the <errno.h> header file. */
 #define HAVE_ERRNO_H 1
@@ -412,10 +412,10 @@
 /* #undef HAVE_LIBSSH2_H */
 
 /* Define to 1 if you have the `ssl' library (-lssl). */
-#define HAVE_LIBSSL 1
+/* #undef HAVE_LIBSSL */
 
 /* if zlib is available */
-#define HAVE_LIBZ 1
+/* #undef HAVE_LIBZ */
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
@@ -457,7 +457,7 @@
 #define HAVE_NET_IF_H 1
 
 /* Define to 1 if you have the <nghttp2/nghttp2.h> header file. */
-#define HAVE_NGHTTP2_NGHTTP2_H 1
+/* #undef HAVE_NGHTTP2_NGHTTP2_H */
 
 /* Define to 1 if NI_WITHSCOPEID exists and works. */
 /* #undef HAVE_NI_WITHSCOPEID */
@@ -467,31 +467,31 @@
 /* #undef HAVE_OLD_GSSMIT */
 
 /* Define to 1 if you have the <openssl/crypto.h> header file. */
-#define HAVE_OPENSSL_CRYPTO_H 1
+/* #undef HAVE_OPENSSL_CRYPTO_H */
 
 /* Define to 1 if you have the <openssl/engine.h> header file. */
-#define HAVE_OPENSSL_ENGINE_H 1
+/* #undef HAVE_OPENSSL_ENGINE_H */
 
 /* Define to 1 if you have the <openssl/err.h> header file. */
-#define HAVE_OPENSSL_ERR_H 1
+/* #undef HAVE_OPENSSL_ERR_H */
 
 /* Define to 1 if you have the <openssl/pem.h> header file. */
-#define HAVE_OPENSSL_PEM_H 1
+/* #undef HAVE_OPENSSL_PEM_H */
 
 /* Define to 1 if you have the <openssl/pkcs12.h> header file. */
-#define HAVE_OPENSSL_PKCS12_H 1
+/* #undef HAVE_OPENSSL_PKCS12_H */
 
 /* Define to 1 if you have the <openssl/rsa.h> header file. */
-#define HAVE_OPENSSL_RSA_H 1
+/* #undef HAVE_OPENSSL_RSA_H */
 
 /* if you have the function SRP_Calc_client_key */
-#define HAVE_OPENSSL_SRP 1
+/* #undef HAVE_OPENSSL_SRP */
 
 /* Define to 1 if you have the <openssl/ssl.h> header file. */
-#define HAVE_OPENSSL_SSL_H 1
+/* #undef HAVE_OPENSSL_SSL_H */
 
 /* Define to 1 if you have the <openssl/x509.h> header file. */
-#define HAVE_OPENSSL_X509_H 1
+/* #undef HAVE_OPENSSL_X509_H */
 
 /* Define to 1 if you have the <pem.h> header file. */
 /* #undef HAVE_PEM_H */
@@ -521,7 +521,7 @@
 #define HAVE_PWD_H 1
 
 /* Define to 1 if you have the `RAND_egd' function. */
-#define HAVE_RAND_EGD 1
+/* #undef HAVE_RAND_EGD */
 
 /* Define to 1 if you have the recv function. */
 #define HAVE_RECV 1
@@ -593,7 +593,7 @@
 /* #undef HAVE_SSLV2_CLIENT_METHOD */
 
 /* Define to 1 if you have the `SSL_get_shutdown' function. */
-#define HAVE_SSL_GET_SHUTDOWN 1
+/* #undef HAVE_SSL_GET_SHUTDOWN */
 
 /* Define to 1 if you have the <ssl.h> header file. */
 /* #undef HAVE_SSL_H */
@@ -761,7 +761,7 @@
 /* #undef HAVE_WOLFSSL_USEALPN */
 
 /* Define this symbol if your OS supports changing the contents of argv */
-#define HAVE_WRITABLE_ARGV 1
+/* #undef HAVE_WRITABLE_ARGV */
 
 /* Define to 1 if you have the writev function. */
 #define HAVE_WRITEV 1
@@ -773,7 +773,7 @@
 /* #undef HAVE_X509_H */
 
 /* if you have the zlib.h header file */
-#define HAVE_ZLIB_H 1
+/* #undef HAVE_ZLIB_H */
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
@@ -794,13 +794,13 @@
 /* #undef NEED_THREAD_SAFE */
 
 /* Define to enable NTLM delegation to winbind's ntlm_auth helper. */
-#define NTLM_WB_ENABLED 1
+/* #undef NTLM_WB_ENABLED */
 
 /* Define absolute filename for winbind's ntlm_auth helper. */
-#define NTLM_WB_FILE "/usr/bin/ntlm_auth"
+/* #undef NTLM_WB_FILE */
 
 /* cpu-machine-OS */
-#define OS "x86_64-pc-linux-gnu"
+#define OS "arm-unknown-linux-gnu"
 
 /* Name of package */
 #define PACKAGE "curl"
@@ -824,7 +824,7 @@
 #define PACKAGE_VERSION "-"
 
 /* a suitable file to read random data from */
-#define RANDOM_FILE "/dev/urandom"
+/* #undef RANDOM_FILE */
 
 /* Define to the type of arg 1 for recv. */
 #define RECV_TYPE_ARG1 int
@@ -839,7 +839,7 @@
 #define RECV_TYPE_ARG4 int
 
 /* Define to the function return type for recv. */
-#define RECV_TYPE_RETV ssize_t
+#define RECV_TYPE_RETV int
 
 /* Define as the return type of signal handlers (`int' or `void'). */
 #define RETSIGTYPE void
@@ -875,13 +875,13 @@
 #define SEND_TYPE_ARG4 int
 
 /* Define to the function return type for send. */
-#define SEND_TYPE_RETV ssize_t
+#define SEND_TYPE_RETV int
 
 /* The size of `int', as computed by sizeof. */
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 8
+#define SIZEOF_LONG 4
 
 /* The size of `long long', as computed by sizeof. */
 /* #undef SIZEOF_LONG_LONG */
@@ -893,13 +893,13 @@
 #define SIZEOF_SHORT 2
 
 /* The size of `size_t', as computed by sizeof. */
-#define SIZEOF_SIZE_T 8
+#define SIZEOF_SIZE_T 4
 
 /* The size of `time_t', as computed by sizeof. */
-#define SIZEOF_TIME_T 8
+#define SIZEOF_TIME_T 4
 
 /* The size of `void*', as computed by sizeof. */
-#define SIZEOF_VOIDP 8
+#define SIZEOF_VOIDP 4
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
@@ -947,7 +947,7 @@
 /* #undef USE_METALINK */
 
 /* if nghttp2 is in use */
-#define USE_NGHTTP2 1
+/* #undef USE_NGHTTP2 */
 
 /* if NSS is enabled */
 /* #undef USE_NSS */
@@ -956,7 +956,7 @@
 /* #undef USE_OPENLDAP */
 
 /* if OpenSSL is in use */
-#define USE_OPENSSL 1
+/* #undef USE_OPENSSL */
 
 /* if PolarSSL is enabled */
 /* #undef USE_POLARSSL */
@@ -971,7 +971,7 @@
 /* #undef USE_THREADS_WIN32 */
 
 /* Use TLS-SRP authentication */
-#define USE_TLS_SRP 1
+/* #undef USE_TLS_SRP */
 
 /* Use Unix domain sockets */
 #define USE_UNIX_SOCKETS 1
@@ -1013,7 +1013,7 @@
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-/* #undef _FILE_OFFSET_BITS */
+#define _FILE_OFFSET_BITS 64
 
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */

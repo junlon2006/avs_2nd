@@ -1,0 +1,13 @@
+# CMake generated Testfile for 
+# Source directory: /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test
+# Build directory: /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(CertifiedSenderTest.clearDataTest "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/CertifiedSenderTest" "--gtest_filter=CertifiedSenderTest.clearDataTest" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testConstructionAndDestruction "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testConstructionAndDestruction" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testDatabaseCreation "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testDatabaseCreation" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testOpenAndCloseDatabase "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testOpenAndCloseDatabase" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testDatabaseStoreAndLoad "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testDatabaseStoreAndLoad" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testDatabaseErase "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testDatabaseErase" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")
+add_test(MessageStorageTest.testDatabaseClear "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-build/CertifiedSender/test/MessageStorageTest" "--gtest_filter=MessageStorageTest.testDatabaseClear" "/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/sdk-source/avs-device-sdk/CertifiedSender/test")

@@ -8,7 +8,7 @@
 dlname='libnghttp2.so.14'
 
 # Names of this library.
-library_names='libnghttp2.so.14.16.2 libnghttp2.so.14 libnghttp2.so'
+library_names='libnghttp2.so.14.17.0 libnghttp2.so.14 libnghttp2.so'
 
 # The name of the static archive.
 old_library='libnghttp2.a'
@@ -23,9 +23,9 @@ dependency_libs=''
 weak_library_names=''
 
 # Version information for libnghttp2.
-current=30
-age=16
-revision=2
+current=31
+age=17
+revision=0
 
 # Is this an already installed library?
 installed=yes
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/nghttp2/lib'
+libdir='/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib'

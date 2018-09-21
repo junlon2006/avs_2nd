@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'gcc -E -I/usr/local/include';
+$Cpreprocessor = 'arm-linux-gnueabi-gcc-4.7 -E';
 
 1;

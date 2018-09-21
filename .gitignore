@@ -1,0 +1,6 @@
+*cscope*
+*tags
+*.o
+*.lo
+*Plo
+*.out

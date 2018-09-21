@@ -1,4 +1,4 @@
-prefix=/home/junlon2006/workspace/amazon/sdk-folder/sdk-build/ARM/glib
+prefix=/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: GThread
 Description: Thread support for GLib
 Requires: glib-2.0
-Version: 2.59.0
+Version: 2.58.0
 Libs: -L${libdir} -lgthread-2.0 -pthread
 Cflags: -pthread

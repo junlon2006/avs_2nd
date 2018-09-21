@@ -1,82 +1,108 @@
-libcurl_la-nonblock.lo: nonblock.c /usr/include/stdc-predef.h \
- curl_setup.h curl_config.h ../include/curl/curl.h \
- ../include/curl/curlver.h ../include/curl/system.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/sigset.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/sys/uio.h \
- /usr/include/x86_64-linux-gnu/bits/uio.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h ../include/curl/curlbuild.h \
- ../include/curl/curlrules.h /usr/include/stdio.h /usr/include/libio.h \
- /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/xlocale.h \
- /usr/include/x86_64-linux-gnu/sys/time.h ../include/curl/easy.h \
- ../include/curl/multi.h ../include/curl/curl.h \
- ../include/curl/typecheck-gcc.h /usr/include/assert.h curl_setup_once.h \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/string.h \
- /usr/include/x86_64-linux-gnu/bits/string2.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/ctype.h \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h \
- /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdbool.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/sys/ioctl.h \
- /usr/include/x86_64-linux-gnu/bits/ioctls.h \
- /usr/include/x86_64-linux-gnu/asm/ioctls.h \
- /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
- /usr/include/x86_64-linux-gnu/asm/ioctl.h \
- /usr/include/asm-generic/ioctl.h \
- /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
- /usr/include/x86_64-linux-gnu/sys/ttydefaults.h /usr/include/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl2.h nonblock.h
-
-/usr/include/stdc-predef.h:
+libcurl_la-nonblock.lo: nonblock.c curl_setup.h curl_config.h \
+ ../include/curl/curl.h ../include/curl/curlver.h \
+ ../include/curl/system.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/types.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/features.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdc-predef.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/cdefs.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wordsize.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs-soft.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/types.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/typesizes.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/time.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stddef.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/endian.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/endian.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap-16.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/select.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sigset.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/time.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select2.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/sysmacros.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/pthreadtypes.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/socket.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/uio.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/uio.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket_type.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sockaddr.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/socket.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/socket.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/sockios.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/sockios.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket2.h \
+ ../include/curl/curlbuild.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdint.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdint.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wchar.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/inttypes.h \
+ ../include/curl/curlrules.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/libio.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/_G_config.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/wchar.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio_lim.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sys_errlist.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio2.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/limits.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/syslimits.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/limits.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix1_lim.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/local_lim.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/limits.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix2_lim.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/xlocale.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/time.h \
+ ../include/curl/easy.h ../include/curl/multi.h ../include/curl/curl.h \
+ ../include/curl/typecheck-gcc.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/assert.h \
+ curl_setup_once.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdlib.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitflags.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitstatus.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/alloca.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-bsearch.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-float.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string2.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string3.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/ctype.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/errno.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/errno.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/errno.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/errno.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno-base.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/stat.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stat.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdbool.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/unistd.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix_opt.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/environments.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/confname.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/getopt.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/unistd.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/ioctl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/ioctls.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/ioctls.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/ioctls.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/ioctl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/ioctl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/ioctl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/ioctl-types.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/ttydefaults.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/fcntl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl-linux.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl2.h \
+ nonblock.h
 
 curl_setup.h:
 
@@ -88,109 +114,119 @@ curl_config.h:
 
 ../include/curl/system.h:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/types.h:
 
-/usr/include/features.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/features.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdc-predef.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/cdefs.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wordsize.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs-soft.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/types.h:
 
-/usr/include/time.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/typesizes.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/time.h:
 
-/usr/include/endian.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stddef.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/endian.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/endian.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap-16.h:
 
-/usr/include/x86_64-linux-gnu/bits/select.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigset.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sigset.h:
 
-/usr/include/x86_64-linux-gnu/bits/select2.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select2.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/sysmacros.h:
 
-/usr/include/x86_64-linux-gnu/sys/socket.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/pthreadtypes.h:
 
-/usr/include/x86_64-linux-gnu/sys/uio.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/socket.h:
 
-/usr/include/x86_64-linux-gnu/bits/uio.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/uio.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/uio.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket.h:
 
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket_type.h:
 
-/usr/include/x86_64-linux-gnu/asm/socket.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sockaddr.h:
 
-/usr/include/asm-generic/socket.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/socket.h:
 
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/socket.h:
 
-/usr/include/asm-generic/sockios.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/sockios.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/sockios.h:
+
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket2.h:
 
 ../include/curl/curlbuild.h:
 
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdint.h:
+
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdint.h:
+
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wchar.h:
+
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/inttypes.h:
+
 ../include/curl/curlrules.h:
 
-/usr/include/stdio.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:
 
-/usr/include/libio.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/libio.h:
 
-/usr/include/_G_config.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/_G_config.h:
 
-/usr/include/wchar.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/wchar.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sys_errlist.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio2.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/limits.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/syslimits.h:
 
-/usr/include/limits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix1_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/local_lim.h:
 
-/usr/include/linux/limits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix2_lim.h:
 
-/usr/include/xlocale.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/xlocale.h:
 
-/usr/include/x86_64-linux-gnu/sys/time.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/time.h:
 
 ../include/curl/easy.h:
 
@@ -200,88 +236,88 @@ curl_config.h:
 
 ../include/curl/typecheck-gcc.h:
 
-/usr/include/assert.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/assert.h:
 
 curl_setup_once.h:
 
-/usr/include/stdlib.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitflags.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitstatus.h:
 
-/usr/include/alloca.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-bsearch.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib.h:
 
-/usr/include/string.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/string.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/string2.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string2.h:
 
-/usr/include/x86_64-linux-gnu/bits/string3.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string3.h:
 
-/usr/include/ctype.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/ctype.h:
 
-/usr/include/errno.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/errno.h:
 
-/usr/include/linux/errno.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/errno.h:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/errno.h:
 
-/usr/include/asm-generic/errno.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno-base.h:
 
-/usr/include/x86_64-linux-gnu/sys/stat.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/stat.h:
 
-/usr/include/x86_64-linux-gnu/bits/stat.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stat.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdbool.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdbool.h:
 
-/usr/include/unistd.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/unistd.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix_opt.h:
 
-/usr/include/x86_64-linux-gnu/bits/environments.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/environments.h:
 
-/usr/include/x86_64-linux-gnu/bits/confname.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/confname.h:
 
-/usr/include/getopt.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/getopt.h:
 
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/unistd.h:
 
-/usr/include/x86_64-linux-gnu/sys/ioctl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/ioctl.h:
 
-/usr/include/x86_64-linux-gnu/bits/ioctls.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/ioctls.h:
 
-/usr/include/x86_64-linux-gnu/asm/ioctls.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/ioctls.h:
 
-/usr/include/asm-generic/ioctls.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/ioctls.h:
 
-/usr/include/linux/ioctl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/ioctl.h:
 
-/usr/include/x86_64-linux-gnu/asm/ioctl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/ioctl.h:
 
-/usr/include/asm-generic/ioctl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/ioctl.h:
 
-/usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/ioctl-types.h:
 
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/ttydefaults.h:
 
-/usr/include/fcntl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/fcntl.h:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl.h:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl-linux.h:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
+/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/fcntl2.h:
 
 nonblock.h:
