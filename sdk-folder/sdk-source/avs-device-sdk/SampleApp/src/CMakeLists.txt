@@ -29,6 +29,7 @@ target_include_directories(SampleApp PUBLIC
     "${AudioResources_SOURCE_DIR}/include"
     "${RegistrationManager_SOURCE_DIR}/include"
     "${ESP_SOURCE_DIR}/include"
+    "${UNISOUND_KEY_WORD_DETECTOR_INCLUDE_DIR}"
     "${PORTAUDIO_INCLUDE_DIR}")
 
 target_link_libraries(SampleApp 
@@ -37,7 +38,8 @@ target_link_libraries(SampleApp
     CBLAuthDelegate
     SQLiteStorage
     ESP
-    "${PORTAUDIO_LIB_PATH}")
+    "${PORTAUDIO_LIB_PATH}"
+    "${UNISOUND_KEY_WORD_DETECTOR_LIB_PATH}/libsyshal.so")
 
 if (ANDROID)
     target_include_directories(SampleApp PUBLIC "${AndroidUtilities}/include")

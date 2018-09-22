@@ -22,21 +22,27 @@
 #include <AVSCommon/Utils/Logger/Logger.h>
 #include "SampleApp/PortAudioMicrophoneWrapper.h"
 #include "SampleApp/ConsolePrinter.h"
+#include "uni_sys_hal.h"
+#include "uni_iot.h"
+#include "uni_types.h"
+#include <pthread.h>
+#include <unistd.h>
+#include <stdio.h>
 
 namespace alexaClientSDK {
 namespace sampleApp {
 
 using avsCommon::avs::AudioInputStream;
 
-static const int NUM_INPUT_CHANNELS = 1;
-static const int NUM_OUTPUT_CHANNELS = 0;
-static const double SAMPLE_RATE = 16000;
-static const unsigned long PREFERRED_SAMPLES_PER_CALLBACK = paFramesPerBufferUnspecified;
-
-static const std::string SAMPLE_APP_CONFIG_ROOT_KEY("sampleApp");
-static const std::string PORTAUDIO_CONFIG_ROOT_KEY("portAudio");
-static const std::string PORTAUDIO_CONFIG_SUGGESTED_LATENCY_KEY("suggestedLatency");
-
+static const int UNISOUND_AUDIO_CHANNLES_NUMBER = 1;
+static const int UNISOUND_AUDIO_BITS = 16;
+static const int UNISOUND_AUDIO_RATE = 16000;
+static const int UNISOUND_DEFAULT_FRAME_LEN_MS = 16;
+static void *m_unisound_audio_handler;
+static int m_unisound_audio_frame_size;
+static char *m_unisound_audio_buffer;
+static bool m_unisound_audio_start = false;
+static std::shared_ptr<avsCommon::avs::AudioInputStream::Writer> m_writer;
 /// String to identify log entries originating from this file.
 static const std::string TAG("PortAudioMicrophoneWrapper");
 
@@ -62,14 +68,54 @@ std::unique_ptr<PortAudioMicrophoneWrapper> PortAudioMicrophoneWrapper::create(
 }
 
 PortAudioMicrophoneWrapper::PortAudioMicrophoneWrapper(std::shared_ptr<AudioInputStream> stream) :
-        m_audioInputStream{stream},
-        m_paStream{nullptr} {
+        m_audioInputStream{stream} {
 }
 
 PortAudioMicrophoneWrapper::~PortAudioMicrophoneWrapper() {
-    Pa_StopStream(m_paStream);
-    Pa_CloseStream(m_paStream);
-    Pa_Terminate();
+}
+
+static void *__unisound_record_tsk(void *args) {
+    printf("%s%d: unisound start record task\n", __FUNCTION__, __LINE__);
+    int len;
+    while (true) {
+        len = uni_hal_audio_read(m_unisound_audio_handler, m_unisound_audio_buffer, m_unisound_audio_frame_size);
+        if (len == m_unisound_audio_frame_size && m_unisound_audio_start) {
+            m_writer->write(m_unisound_audio_buffer, len / 2);
+        }
+    }
+    return nullptr;
+}
+
+static void __unisound_audio_record_worker_thread_create() {
+    pthread_t pid;
+    pthread_create(&pid, NULL, __unisound_record_tsk, NULL);
+    pthread_detach(pid);
+}
+
+static int __unisound_audio_record_init() {
+    struct hal_audio_config audio_config;
+    audio_config.channels = UNISOUND_AUDIO_CHANNLES_NUMBER;
+    audio_config.bits = UNISOUND_AUDIO_BITS;
+    audio_config.rate = UNISOUND_AUDIO_RATE;
+    audio_config.period_size = 2048;
+    audio_config.period_count = 4;
+    audio_config.is_play = 0;
+    printf("%s%d: unisound channel=%d, bits=%d, rate=%d, period_size=%d, period_count=%d\n",
+           __FUNCTION__, __LINE__, UNISOUND_AUDIO_CHANNLES_NUMBER,
+           UNISOUND_AUDIO_BITS, UNISOUND_AUDIO_RATE,
+           audio_config.period_size, audio_config.period_count);
+    m_unisound_audio_handler = uni_hal_audio_open(&audio_config);
+    if (nullptr == m_unisound_audio_handler) {
+        printf("%s%d: unisound create audio in handler failed\n", __FUNCTION__, __LINE__);
+        return -1;
+    }
+    m_unisound_audio_frame_size = UNISOUND_DEFAULT_FRAME_LEN_MS * 32;
+    if (nullptr == (m_unisound_audio_buffer = (char *)malloc(m_unisound_audio_frame_size))) {
+        printf("%s%d: unisound alloc memory failed\n", __FUNCTION__, __LINE__);
+        return -1;
+    }
+    __unisound_audio_record_worker_thread_create();
+    return 0;
 }
 
 bool PortAudioMicrophoneWrapper::initialize() {
@@ -78,106 +124,24 @@ bool PortAudioMicrophoneWrapper::initialize() {
         ACSDK_CRITICAL(LX("Failed to create stream writer"));
         return false;
     }
-    PaError err;
-    err = Pa_Initialize();
-    if (err != paNoError) {
-        ACSDK_CRITICAL(LX("Failed to initialize PortAudio").d("errorCode", err));
-        return false;
+
+    m_unisound_audio_start = false;
+    if (0 == __unisound_audio_record_init()) {
+      return true;
     }
-
-    PaTime suggestedLatency;
-    bool latencyInConfig = getConfigSuggestedLatency(suggestedLatency);
-
-    if (!latencyInConfig) {
-        err = Pa_OpenDefaultStream(
-            &m_paStream,
-            NUM_INPUT_CHANNELS,
-            NUM_OUTPUT_CHANNELS,
-            paInt16,
-            SAMPLE_RATE,
-            PREFERRED_SAMPLES_PER_CALLBACK,
-            PortAudioCallback,
-            this);
-    } else {
-        ACSDK_INFO(
-            LX("PortAudio suggestedLatency has been configured to ").d("Seconds", std::to_string(suggestedLatency)));
-
-        PaStreamParameters inputParameters;
-        std::memset(&inputParameters, 0, sizeof(inputParameters));
-        inputParameters.device = Pa_GetDefaultInputDevice();
-        inputParameters.channelCount = NUM_INPUT_CHANNELS;
-        inputParameters.sampleFormat = paInt16;
-        inputParameters.suggestedLatency = suggestedLatency;
-        inputParameters.hostApiSpecificStreamInfo = nullptr;
-
-        err = Pa_OpenStream(
-            &m_paStream,
-            &inputParameters,
-            nullptr,
-            SAMPLE_RATE,
-            PREFERRED_SAMPLES_PER_CALLBACK,
-            paNoFlag,
-            PortAudioCallback,
-            this);
-    }
-
-    if (err != paNoError) {
-        ACSDK_CRITICAL(LX("Failed to open PortAudio default stream").d("errorCode", err));
-        return false;
-    }
-    return true;
+    return false;
 }
 
 bool PortAudioMicrophoneWrapper::startStreamingMicrophoneData() {
     std::lock_guard<std::mutex> lock{m_mutex};
-    PaError err = Pa_StartStream(m_paStream);
-    if (err != paNoError) {
-        ACSDK_CRITICAL(LX("Failed to start PortAudio stream"));
-        return false;
-    }
+    m_unisound_audio_start = true;
     return true;
 }
 
 bool PortAudioMicrophoneWrapper::stopStreamingMicrophoneData() {
     std::lock_guard<std::mutex> lock{m_mutex};
-    PaError err = Pa_StopStream(m_paStream);
-    if (err != paNoError) {
-        ACSDK_CRITICAL(LX("Failed to stop PortAudio stream"));
-        return false;
-    }
+    m_unisound_audio_start = false;
     return true;
-}
-
-int PortAudioMicrophoneWrapper::PortAudioCallback(
-    const void* inputBuffer,
-    void* outputBuffer,
-    unsigned long numSamples,
-    const PaStreamCallbackTimeInfo* timeInfo,
-    PaStreamCallbackFlags statusFlags,
-    void* userData) {
-    PortAudioMicrophoneWrapper* wrapper = static_cast<PortAudioMicrophoneWrapper*>(userData);
-    ssize_t returnCode = wrapper->m_writer->write(inputBuffer, numSamples);
-    if (returnCode <= 0) {
-        ACSDK_CRITICAL(LX("Failed to write to stream."));
-        return paAbort;
-    }
-    return paContinue;
-}
-
-bool PortAudioMicrophoneWrapper::getConfigSuggestedLatency(PaTime& suggestedLatency) {
-    bool latencyInConfig = false;
-    auto config = avsCommon::utils::configuration::ConfigurationNode::getRoot()[SAMPLE_APP_CONFIG_ROOT_KEY]
-                                                                               [PORTAUDIO_CONFIG_ROOT_KEY];
-    if (config) {
-        latencyInConfig = config.getValue(
-            PORTAUDIO_CONFIG_SUGGESTED_LATENCY_KEY,
-            &suggestedLatency,
-            suggestedLatency,
-            &rapidjson::Value::IsDouble,
-            &rapidjson::Value::GetDouble);
-    }
-
-    return latencyInConfig;
 }
 
 }  // namespace sampleApp
