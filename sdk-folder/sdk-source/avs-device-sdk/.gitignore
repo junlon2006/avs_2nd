@@ -5,3 +5,5 @@
 Integration/AuthDelegate.config
 #macOS specific files
 .DS_Store
+*.swp
+*.swo

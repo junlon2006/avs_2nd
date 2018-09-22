@@ -60,21 +60,6 @@ static const unsigned int UNISOUND_COMPATIBLE_NUM_CHANNELS = 1;
  * @return The pertinent message about the sensory session in string format.
  */
 
-#if 0
-SnsrRC UnisoundKeywordDetector::keyWordDetectedCallback(SnsrSession s, const char* key, void* userData) {
-    UnisoundKeywordDetector* engine = static_cast<UnisoundKeywordDetector*>(userData);
-    const char* keyword;
-    double begin;
-    double end;
-    engine->notifyKeyWordObservers(
-        engine->m_stream,
-        keyword,
-        engine->m_beginIndexOfStreamReader + begin,
-        engine->m_beginIndexOfStreamReader + end);
-    return SNSR_RC_OK;
-}
-#endif
-
 std::unique_ptr<UnisoundKeywordDetector> UnisoundKeywordDetector::create(
     std::shared_ptr<avsCommon::avs::AudioInputStream> stream,
     avsCommon::utils::AudioFormat audioFormat,
@@ -198,9 +183,7 @@ static char* __unisound_recognize(char *buf, int len) {
     char *result = nullptr;
     float score;
     static char keyword[64] = {0};
-    int ret = 0;
-    ret = recognize(buf, len * 2);
-    if (2 == ret) {
+    if (2 == recognize(buf, len * 2)) {
         result = getResult();
         __recognize_result_parse(result, keyword, &score);
         if (-10.0 < score) {
@@ -240,7 +223,6 @@ void UnisoundKeywordDetector::detectionLoop() {
     }
     m_streamReader->close();
 }
-
 
 }  // namespace kwd
 }  // namespace alexaClientSDK
