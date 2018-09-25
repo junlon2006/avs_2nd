@@ -38,7 +38,6 @@ target_link_libraries(SampleApp
     CBLAuthDelegate
     SQLiteStorage
     ESP
-    "${PORTAUDIO_LIB_PATH}"
     "${UNISOUND_KEY_WORD_DETECTOR_LIB_PATH}/libsyshal.so")
 
 if (ANDROID)
