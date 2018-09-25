@@ -74,12 +74,29 @@ PortAudioMicrophoneWrapper::PortAudioMicrophoneWrapper(std::shared_ptr<AudioInpu
 PortAudioMicrophoneWrapper::~PortAudioMicrophoneWrapper() {
 }
 
+static void __restart_audio_handler() {
+    struct hal_audio_config audio_config;
+    audio_config.channels = UNISOUND_AUDIO_CHANNLES_NUMBER;
+    audio_config.bits = UNISOUND_AUDIO_BITS;
+    audio_config.rate = UNISOUND_AUDIO_RATE;
+    audio_config.period_size = 2048;
+    audio_config.period_count = 4;
+    audio_config.is_play = 0;
+    uni_hal_audio_close(m_unisound_audio_handler);
+    m_unisound_audio_handler = uni_hal_audio_open(&audio_config);
+    printf("%s%d: unisound audio restart ok\n", __FUNCTION__, __LINE__);
+}
+
 static void *__unisound_record_tsk(void *args) {
     printf("%s%d: unisound start record task\n", __FUNCTION__, __LINE__);
     int len;
     while (true) {
         len = uni_hal_audio_read(m_unisound_audio_handler, m_unisound_audio_buffer, m_unisound_audio_frame_size);
-        if (len == m_unisound_audio_frame_size && m_unisound_audio_start) {
+        if (len != m_unisound_audio_frame_size) {
+            __restart_audio_handler();
+            continue;
+        }
+        if (m_unisound_audio_start) {
             m_writer->write(m_unisound_audio_buffer, len / 2);
         }
     }
