@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstbase-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstreamer-1.0.la -lm -lrt -ldl'
+dependency_libs=' -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgio-2.0.la -lresolv /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstbase-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstreamer-1.0.la -lm /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -lpthread -lrt -ldl'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

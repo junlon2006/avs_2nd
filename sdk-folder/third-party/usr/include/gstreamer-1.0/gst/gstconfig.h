@@ -93,7 +93,7 @@
 
 /* FIXME: test and document these! */
 /* Configures the use of external plugins */
-#define GST_DISABLE_PLUGIN 1
+/* #undef GST_DISABLE_PLUGIN */
 
 /* Whether or not the CPU supports unaligned access
  * The macros used are defined consistently by GCC, Clang, MSVC, Sun, and ICC

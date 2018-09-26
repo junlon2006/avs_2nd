@@ -14,10 +14,10 @@ library_names='libgstreamer-1.0.so.0.1403.0 libgstreamer-1.0.so.0 libgstreamer-1
 old_library=''
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -lm -lrt -ldl'
+dependency_libs=' -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -lpthread -lm -lrt -ldl'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

@@ -21,7 +21,7 @@
 
 #include <AVSCommon/AVS/AudioInputStream.h>
 
-#include <portaudio.h>
+//#include <portaudio.h>
 #include <Audio/MicrophoneInterface.h>
 
 namespace alexaClientSDK {
