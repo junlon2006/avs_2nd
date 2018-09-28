@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -lpthread'
+dependency_libs=' -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libpcre.la -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

@@ -16,5 +16,5 @@ Version: 2.58.0
 Requires: glib-2.0 gobject-2.0
 Requires.private: gmodule-no-export-2.0
 Libs: -L${libdir} -lgio-2.0
-Libs.private: /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libz.a -lresolv     
+Libs.private: -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib -lz -lresolv     
 Cflags:

@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstvideo-1.0.la -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstbase-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstreamer-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la -lm -lrt -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -lpthread'
+dependency_libs=' /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstvideo-1.0.la -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/../lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstbase-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgstreamer-1.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la -lm -lrt -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/../lib/libffi.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libpcre.la -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

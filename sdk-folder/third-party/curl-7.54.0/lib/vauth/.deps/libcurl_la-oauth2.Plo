@@ -1,113 +1,177 @@
-vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
+vauth/libcurl_la-oauth2.lo: vauth/oauth2.c \
+ /usr/arm-linux-gnueabihf/include/stdc-predef.h ../lib/curl_setup.h \
  ../lib/curl_config.h ../include/curl/curl.h ../include/curl/curlver.h \
- ../include/curl/system.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/types.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/features.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdc-predef.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/cdefs.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wordsize.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs-soft.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/types.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/typesizes.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/time.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stddef.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/endian.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/endian.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap-16.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/select.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sigset.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/time.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select2.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/sysmacros.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/pthreadtypes.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/socket.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/uio.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/uio.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket_type.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sockaddr.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/socket.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/socket.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/sockios.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/sockios.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket2.h \
+ ../include/curl/system.h /usr/arm-linux-gnueabihf/include/sys/types.h \
+ /usr/arm-linux-gnueabihf/include/features.h \
+ /usr/arm-linux-gnueabihf/include/sys/cdefs.h \
+ /usr/arm-linux-gnueabihf/include/bits/wordsize.h \
+ /usr/arm-linux-gnueabihf/include/gnu/stubs.h \
+ /usr/arm-linux-gnueabihf/include/gnu/stubs-hard.h \
+ /usr/arm-linux-gnueabihf/include/bits/types.h \
+ /usr/arm-linux-gnueabihf/include/bits/typesizes.h \
+ /usr/arm-linux-gnueabihf/include/time.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stddef.h \
+ /usr/arm-linux-gnueabihf/include/endian.h \
+ /usr/arm-linux-gnueabihf/include/bits/endian.h \
+ /usr/arm-linux-gnueabihf/include/bits/byteswap.h \
+ /usr/arm-linux-gnueabihf/include/bits/byteswap-16.h \
+ /usr/arm-linux-gnueabihf/include/sys/select.h \
+ /usr/arm-linux-gnueabihf/include/bits/select.h \
+ /usr/arm-linux-gnueabihf/include/bits/sigset.h \
+ /usr/arm-linux-gnueabihf/include/bits/time.h \
+ /usr/arm-linux-gnueabihf/include/bits/select2.h \
+ /usr/arm-linux-gnueabihf/include/sys/sysmacros.h \
+ /usr/arm-linux-gnueabihf/include/bits/pthreadtypes.h \
+ /usr/arm-linux-gnueabihf/include/sys/socket.h \
+ /usr/arm-linux-gnueabihf/include/sys/uio.h \
+ /usr/arm-linux-gnueabihf/include/bits/uio.h \
+ /usr/arm-linux-gnueabihf/include/bits/socket.h \
+ /usr/arm-linux-gnueabihf/include/bits/socket_type.h \
+ /usr/arm-linux-gnueabihf/include/bits/sockaddr.h \
+ /usr/arm-linux-gnueabihf/include/asm/socket.h \
+ /usr/arm-linux-gnueabihf/include/asm-generic/socket.h \
+ /usr/arm-linux-gnueabihf/include/asm/sockios.h \
+ /usr/arm-linux-gnueabihf/include/asm-generic/sockios.h \
+ /usr/arm-linux-gnueabihf/include/bits/socket2.h \
  ../include/curl/curlbuild.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdint.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdint.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wchar.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/inttypes.h \
- ../include/curl/curlrules.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/libio.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/_G_config.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/wchar.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio_lim.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sys_errlist.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio2.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/limits.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/syslimits.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/limits.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix1_lim.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/local_lim.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/limits.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix2_lim.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/xlocale.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/time.h \
- ../include/curl/easy.h ../include/curl/multi.h ../include/curl/curl.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdint.h \
+ /usr/arm-linux-gnueabihf/include/stdint.h \
+ /usr/arm-linux-gnueabihf/include/bits/wchar.h \
+ /usr/arm-linux-gnueabihf/include/inttypes.h ../include/curl/curlrules.h \
+ /usr/arm-linux-gnueabihf/include/stdio.h \
+ /usr/arm-linux-gnueabihf/include/libio.h \
+ /usr/arm-linux-gnueabihf/include/_G_config.h \
+ /usr/arm-linux-gnueabihf/include/wchar.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdarg.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdio_lim.h \
+ /usr/arm-linux-gnueabihf/include/bits/sys_errlist.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdio.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdio2.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed/limits.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed/syslimits.h \
+ /usr/arm-linux-gnueabihf/include/limits.h \
+ /usr/arm-linux-gnueabihf/include/bits/posix1_lim.h \
+ /usr/arm-linux-gnueabihf/include/bits/local_lim.h \
+ /usr/arm-linux-gnueabihf/include/linux/limits.h \
+ /usr/arm-linux-gnueabihf/include/bits/posix2_lim.h \
+ /usr/arm-linux-gnueabihf/include/xlocale.h \
+ /usr/arm-linux-gnueabihf/include/sys/time.h ../include/curl/easy.h \
+ ../include/curl/multi.h ../include/curl/curl.h \
  ../include/curl/typecheck-gcc.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/assert.h \
- ../lib/curl_setup_once.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdlib.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitflags.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitstatus.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/alloca.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-bsearch.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-float.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string2.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string3.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/ctype.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/errno.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/errno.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/errno.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/errno.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno-base.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/stat.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stat.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdbool.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/unistd.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix_opt.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/environments.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/confname.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/getopt.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/unistd.h \
- ../lib/urldata.h ../lib/curl_setup.h ../lib/cookie.h ../lib/formdata.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/netinet/in.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/in.h \
- ../lib/timeval.h ../lib/http_chunks.h ../lib/hostip.h ../lib/hash.h \
- ../lib/llist.h ../lib/curl_addrinfo.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/netdb.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/rpc/netdb.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/netdb.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/arpa/inet.h \
- ../lib/asyn.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/setjmp.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/setjmp.h \
- /usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/setjmp2.h \
- ../lib/splay.h ../lib/imap.h ../lib/pingpong.h ../lib/curl_sasl.h \
- ../lib/pop3.h ../lib/smtp.h ../lib/ftp.h ../lib/file.h ../lib/ssh.h \
- ../lib/http.h ../lib/rtsp.h ../lib/smb.h ../lib/wildcard.h \
- ../lib/multihandle.h ../lib/conncache.h ../lib/vauth/vauth.h \
- ../lib/curl_base64.h ../lib/warnless.h ../lib/curl_printf.h \
- ../include/curl/mprintf.h ../lib/curl_memory.h ../lib/memdebug.h
+ /usr/arm-linux-gnueabihf/include/assert.h ../lib/curl_setup_once.h \
+ /usr/arm-linux-gnueabihf/include/stdlib.h \
+ /usr/arm-linux-gnueabihf/include/bits/waitflags.h \
+ /usr/arm-linux-gnueabihf/include/bits/waitstatus.h \
+ /usr/arm-linux-gnueabihf/include/alloca.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdlib-bsearch.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdlib-float.h \
+ /usr/arm-linux-gnueabihf/include/bits/stdlib.h \
+ /usr/arm-linux-gnueabihf/include/string.h \
+ /usr/arm-linux-gnueabihf/include/bits/string.h \
+ /usr/arm-linux-gnueabihf/include/bits/string2.h \
+ /usr/arm-linux-gnueabihf/include/bits/string3.h \
+ /usr/arm-linux-gnueabihf/include/ctype.h \
+ /usr/arm-linux-gnueabihf/include/errno.h \
+ /usr/arm-linux-gnueabihf/include/bits/errno.h \
+ /usr/arm-linux-gnueabihf/include/linux/errno.h \
+ /usr/arm-linux-gnueabihf/include/asm/errno.h \
+ /usr/arm-linux-gnueabihf/include/asm-generic/errno.h \
+ /usr/arm-linux-gnueabihf/include/asm-generic/errno-base.h \
+ /usr/arm-linux-gnueabihf/include/sys/stat.h \
+ /usr/arm-linux-gnueabihf/include/bits/stat.h \
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdbool.h \
+ /usr/arm-linux-gnueabihf/include/unistd.h \
+ /usr/arm-linux-gnueabihf/include/bits/posix_opt.h \
+ /usr/arm-linux-gnueabihf/include/bits/environments.h \
+ /usr/arm-linux-gnueabihf/include/bits/confname.h \
+ /usr/arm-linux-gnueabihf/include/getopt.h \
+ /usr/arm-linux-gnueabihf/include/bits/unistd.h ../lib/urldata.h \
+ ../lib/curl_setup.h ../lib/cookie.h ../lib/formdata.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/e_os2.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/opensslconf.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/opensslv.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/comp.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/crypto.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/safestack.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/stack.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ossl_typ.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/cryptoerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/symhacks.h \
+ /usr/arm-linux-gnueabihf/include/pthread.h \
+ /usr/arm-linux-gnueabihf/include/sched.h \
+ /usr/arm-linux-gnueabihf/include/bits/sched.h \
+ /usr/arm-linux-gnueabihf/include/bits/setjmp.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/comperr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bio.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bioerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/buffer.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/buffererr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/evp.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/evperr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/objects.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/obj_mac.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asn1.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asn1err.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bn.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bnerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/objectserr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ec.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ecerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rsa.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rsaerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dsa.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dh.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dherr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dsaerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/sha.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509err.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509_vfy.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/lhash.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pkcs7.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pkcs7err.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pem.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pemerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/hmac.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/async.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asyncerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ct.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/cterr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/sslerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl2.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl3.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/tls1.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dtls1.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/srtp.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/engine.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rand.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/randerr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ui.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/uierr.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/err.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/engineerr.h \
+ /usr/arm-linux-gnueabihf/include/netinet/in.h \
+ /usr/arm-linux-gnueabihf/include/bits/in.h ../lib/timeval.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/zlib.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/zconf.h \
+ ../lib/http_chunks.h ../lib/hostip.h ../lib/hash.h ../lib/llist.h \
+ ../lib/curl_addrinfo.h /usr/arm-linux-gnueabihf/include/netdb.h \
+ /usr/arm-linux-gnueabihf/include/rpc/netdb.h \
+ /usr/arm-linux-gnueabihf/include/bits/netdb.h \
+ /usr/arm-linux-gnueabihf/include/arpa/inet.h ../lib/asyn.h \
+ /usr/arm-linux-gnueabihf/include/setjmp.h \
+ /usr/arm-linux-gnueabihf/include/bits/setjmp2.h ../lib/splay.h \
+ ../lib/imap.h ../lib/pingpong.h ../lib/curl_sasl.h ../lib/pop3.h \
+ ../lib/smtp.h ../lib/ftp.h ../lib/file.h ../lib/ssh.h ../lib/http.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/nghttp2/nghttp2.h \
+ /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/nghttp2/nghttp2ver.h \
+ ../lib/rtsp.h ../lib/smb.h ../lib/wildcard.h ../lib/multihandle.h \
+ ../lib/conncache.h ../lib/vauth/vauth.h ../lib/curl_base64.h \
+ ../lib/warnless.h ../lib/curl_printf.h ../include/curl/mprintf.h \
+ ../lib/curl_memory.h ../lib/memdebug.h
+
+/usr/arm-linux-gnueabihf/include/stdc-predef.h:
 
 ../lib/curl_setup.h:
 
@@ -119,119 +183,117 @@ vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
 
 ../include/curl/system.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/types.h:
+/usr/arm-linux-gnueabihf/include/sys/types.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/features.h:
+/usr/arm-linux-gnueabihf/include/features.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdc-predef.h:
+/usr/arm-linux-gnueabihf/include/sys/cdefs.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/cdefs.h:
+/usr/arm-linux-gnueabihf/include/bits/wordsize.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wordsize.h:
+/usr/arm-linux-gnueabihf/include/gnu/stubs.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs.h:
+/usr/arm-linux-gnueabihf/include/gnu/stubs-hard.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/gnu/stubs-soft.h:
+/usr/arm-linux-gnueabihf/include/bits/types.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/types.h:
+/usr/arm-linux-gnueabihf/include/bits/typesizes.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/typesizes.h:
+/usr/arm-linux-gnueabihf/include/time.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/time.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stddef.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stddef.h:
+/usr/arm-linux-gnueabihf/include/endian.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/endian.h:
+/usr/arm-linux-gnueabihf/include/bits/endian.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/endian.h:
+/usr/arm-linux-gnueabihf/include/bits/byteswap.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap.h:
+/usr/arm-linux-gnueabihf/include/bits/byteswap-16.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/byteswap-16.h:
+/usr/arm-linux-gnueabihf/include/sys/select.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/select.h:
+/usr/arm-linux-gnueabihf/include/bits/select.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select.h:
+/usr/arm-linux-gnueabihf/include/bits/sigset.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sigset.h:
+/usr/arm-linux-gnueabihf/include/bits/time.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/time.h:
+/usr/arm-linux-gnueabihf/include/bits/select2.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/select2.h:
+/usr/arm-linux-gnueabihf/include/sys/sysmacros.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/sysmacros.h:
+/usr/arm-linux-gnueabihf/include/bits/pthreadtypes.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/pthreadtypes.h:
+/usr/arm-linux-gnueabihf/include/sys/socket.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/socket.h:
+/usr/arm-linux-gnueabihf/include/sys/uio.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/uio.h:
+/usr/arm-linux-gnueabihf/include/bits/uio.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/uio.h:
+/usr/arm-linux-gnueabihf/include/bits/socket.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket.h:
+/usr/arm-linux-gnueabihf/include/bits/socket_type.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket_type.h:
+/usr/arm-linux-gnueabihf/include/bits/sockaddr.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sockaddr.h:
+/usr/arm-linux-gnueabihf/include/asm/socket.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/socket.h:
+/usr/arm-linux-gnueabihf/include/asm-generic/socket.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/socket.h:
+/usr/arm-linux-gnueabihf/include/asm/sockios.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/sockios.h:
+/usr/arm-linux-gnueabihf/include/asm-generic/sockios.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/sockios.h:
-
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/socket2.h:
+/usr/arm-linux-gnueabihf/include/bits/socket2.h:
 
 ../include/curl/curlbuild.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdint.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdint.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdint.h:
+/usr/arm-linux-gnueabihf/include/stdint.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/wchar.h:
+/usr/arm-linux-gnueabihf/include/bits/wchar.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/inttypes.h:
+/usr/arm-linux-gnueabihf/include/inttypes.h:
 
 ../include/curl/curlrules.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdio.h:
+/usr/arm-linux-gnueabihf/include/stdio.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/libio.h:
+/usr/arm-linux-gnueabihf/include/libio.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/_G_config.h:
+/usr/arm-linux-gnueabihf/include/_G_config.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/wchar.h:
+/usr/arm-linux-gnueabihf/include/wchar.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdarg.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdarg.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio_lim.h:
+/usr/arm-linux-gnueabihf/include/bits/stdio_lim.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/sys_errlist.h:
+/usr/arm-linux-gnueabihf/include/bits/sys_errlist.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio.h:
+/usr/arm-linux-gnueabihf/include/bits/stdio.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdio2.h:
+/usr/arm-linux-gnueabihf/include/bits/stdio2.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/limits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed/limits.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include-fixed/syslimits.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include-fixed/syslimits.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/limits.h:
+/usr/arm-linux-gnueabihf/include/limits.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix1_lim.h:
+/usr/arm-linux-gnueabihf/include/bits/posix1_lim.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/local_lim.h:
+/usr/arm-linux-gnueabihf/include/bits/local_lim.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/limits.h:
+/usr/arm-linux-gnueabihf/include/linux/limits.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix2_lim.h:
+/usr/arm-linux-gnueabihf/include/bits/posix2_lim.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/xlocale.h:
+/usr/arm-linux-gnueabihf/include/xlocale.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/time.h:
+/usr/arm-linux-gnueabihf/include/sys/time.h:
 
 ../include/curl/easy.h:
 
@@ -241,63 +303,63 @@ vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
 
 ../include/curl/typecheck-gcc.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/assert.h:
+/usr/arm-linux-gnueabihf/include/assert.h:
 
 ../lib/curl_setup_once.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/stdlib.h:
+/usr/arm-linux-gnueabihf/include/stdlib.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitflags.h:
+/usr/arm-linux-gnueabihf/include/bits/waitflags.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/waitstatus.h:
+/usr/arm-linux-gnueabihf/include/bits/waitstatus.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/alloca.h:
+/usr/arm-linux-gnueabihf/include/alloca.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-bsearch.h:
+/usr/arm-linux-gnueabihf/include/bits/stdlib-bsearch.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib-float.h:
+/usr/arm-linux-gnueabihf/include/bits/stdlib-float.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stdlib.h:
+/usr/arm-linux-gnueabihf/include/bits/stdlib.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/string.h:
+/usr/arm-linux-gnueabihf/include/string.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string.h:
+/usr/arm-linux-gnueabihf/include/bits/string.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string2.h:
+/usr/arm-linux-gnueabihf/include/bits/string2.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/string3.h:
+/usr/arm-linux-gnueabihf/include/bits/string3.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/ctype.h:
+/usr/arm-linux-gnueabihf/include/ctype.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/errno.h:
+/usr/arm-linux-gnueabihf/include/errno.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/errno.h:
+/usr/arm-linux-gnueabihf/include/bits/errno.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/linux/errno.h:
+/usr/arm-linux-gnueabihf/include/linux/errno.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm/errno.h:
+/usr/arm-linux-gnueabihf/include/asm/errno.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno.h:
+/usr/arm-linux-gnueabihf/include/asm-generic/errno.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/asm-generic/errno-base.h:
+/usr/arm-linux-gnueabihf/include/asm-generic/errno-base.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/sys/stat.h:
+/usr/arm-linux-gnueabihf/include/sys/stat.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/stat.h:
+/usr/arm-linux-gnueabihf/include/bits/stat.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/include/stdbool.h:
+/usr/lib/gcc-cross/arm-linux-gnueabihf/5/include/stdbool.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/unistd.h:
+/usr/arm-linux-gnueabihf/include/unistd.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/posix_opt.h:
+/usr/arm-linux-gnueabihf/include/bits/posix_opt.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/environments.h:
+/usr/arm-linux-gnueabihf/include/bits/environments.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/confname.h:
+/usr/arm-linux-gnueabihf/include/bits/confname.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/getopt.h:
+/usr/arm-linux-gnueabihf/include/getopt.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/unistd.h:
+/usr/arm-linux-gnueabihf/include/bits/unistd.h:
 
 ../lib/urldata.h:
 
@@ -307,11 +369,143 @@ vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
 
 ../lib/formdata.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/netinet/in.h:
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/in.h:
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/e_os2.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/opensslconf.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/opensslv.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/comp.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/crypto.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/safestack.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/stack.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ossl_typ.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/cryptoerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/symhacks.h:
+
+/usr/arm-linux-gnueabihf/include/pthread.h:
+
+/usr/arm-linux-gnueabihf/include/sched.h:
+
+/usr/arm-linux-gnueabihf/include/bits/sched.h:
+
+/usr/arm-linux-gnueabihf/include/bits/setjmp.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/comperr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bio.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bioerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/buffer.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/buffererr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/evp.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/evperr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/objects.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/obj_mac.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asn1.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asn1err.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bn.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/bnerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/objectserr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ec.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ecerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rsa.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rsaerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dsa.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dh.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dherr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dsaerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/sha.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509err.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/x509_vfy.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/lhash.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pkcs7.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pkcs7err.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pem.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/pemerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/hmac.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/async.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/asyncerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ct.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/cterr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/sslerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl2.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ssl3.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/tls1.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/dtls1.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/srtp.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/engine.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/rand.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/randerr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/ui.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/uierr.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/err.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/openssl/engineerr.h:
+
+/usr/arm-linux-gnueabihf/include/netinet/in.h:
+
+/usr/arm-linux-gnueabihf/include/bits/in.h:
 
 ../lib/timeval.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/zlib.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/zconf.h:
 
 ../lib/http_chunks.h:
 
@@ -323,21 +517,19 @@ vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
 
 ../lib/curl_addrinfo.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/netdb.h:
+/usr/arm-linux-gnueabihf/include/netdb.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/rpc/netdb.h:
+/usr/arm-linux-gnueabihf/include/rpc/netdb.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/netdb.h:
+/usr/arm-linux-gnueabihf/include/bits/netdb.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/arpa/inet.h:
+/usr/arm-linux-gnueabihf/include/arpa/inet.h:
 
 ../lib/asyn.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/setjmp.h:
+/usr/arm-linux-gnueabihf/include/setjmp.h:
 
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/setjmp.h:
-
-/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/../../../../arm-linux-gnueabi/include/bits/setjmp2.h:
+/usr/arm-linux-gnueabihf/include/bits/setjmp2.h:
 
 ../lib/splay.h:
 
@@ -358,6 +550,10 @@ vauth/libcurl_la-oauth2.lo: vauth/oauth2.c ../lib/curl_setup.h \
 ../lib/ssh.h:
 
 ../lib/http.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/nghttp2/nghttp2.h:
+
+/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include/nghttp2/nghttp2ver.h:
 
 ../lib/rtsp.h:
 

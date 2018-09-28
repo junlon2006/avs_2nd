@@ -5,9 +5,9 @@ SET(CMAKE_SYSTEM_NAME Linux)
 #SET(CMAKE_C_COMPILER   /opt/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-gcc)
 #SET(CMAKE_CXX_COMPILER /opt/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-g++)
 
-SET(CMAKE_C_COMPILER    arm-linux-gnueabihf-gcc-5)
-SET(CMAKE_CXX_COMPILER  arm-linux-gnueabihf-g++-5)
-
+SET(CMAKE_C_COMPILER    arm-linux-gnueabihf-gcc)
+SET(CMAKE_CXX_COMPILER  arm-linux-gnueabihf-g++)
+#set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -latomic")
 SET(CMAKE_CXX_FLAGS  "-std=c++11 -fPIC")
 
 # where is the target environment

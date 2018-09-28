@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc libACLTransportCommonTestLib.a  CMakeFiles/ACLTransportCommonTestLib.dir/Common.cpp.o CMakeFiles/ACLTransportCommonTestLib.dir/MimeUtils.cpp.o CMakeFiles/ACLTransportCommonTestLib.dir/TestableAttachmentManager.cpp.o CMakeFiles/ACLTransportCommonTestLib.dir/TestableAttachmentWriter.cpp.o CMakeFiles/ACLTransportCommonTestLib.dir/TestableMessageObserver.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib libACLTransportCommonTestLib.a

@@ -162,7 +162,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="arm-linux-gnueabihf-gcc-5"
+LTCC="arm-linux-gnueabihf-gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2 -fvisibility=hidden -W -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes"
@@ -315,7 +315,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="arm-linux-gnueabihf-gcc-5"
+CC="arm-linux-gnueabihf-gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

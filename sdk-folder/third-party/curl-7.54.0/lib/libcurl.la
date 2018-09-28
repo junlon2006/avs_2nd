@@ -17,7 +17,7 @@ old_library='libcurl.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=''
+dependency_libs=' -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libnghttp2.la -lssl -lcrypto -lz'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

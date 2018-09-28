@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'arm-linux-gnueabi-gcc-4.7 -E';
+$Cpreprocessor = 'arm-linux-gnueabihf-gcc -E -I/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include -I/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/include';
 
 1;

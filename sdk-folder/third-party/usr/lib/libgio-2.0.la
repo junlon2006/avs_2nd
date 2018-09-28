@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la -lpthread -lresolv'
+dependency_libs=' -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/../lib /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgmodule-2.0.la -ldl /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libgobject-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libglib-2.0.la /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libpcre.la -lpthread /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/../lib/libffi.la -lz -lresolv'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc libAttachmentCommonTestLib.a  CMakeFiles/AttachmentCommonTestLib.dir/Common.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib libAttachmentCommonTestLib.a

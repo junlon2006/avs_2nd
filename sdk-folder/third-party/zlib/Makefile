@@ -16,7 +16,7 @@
 # To install in $HOME instead of /usr/local, use:
 #    make install prefix=$HOME
 
-CC=arm-linux-gnueabi-gcc-4.7
+CC=arm-linux-gnueabihf-gcc
 
 CFLAGS=-O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
 #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
@@ -27,8 +27,8 @@ CFLAGS=-O3 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
 SFLAGS=-O3 -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN
 LDFLAGS=
 TEST_LDFLAGS=-L. libz.a
-LDSHARED=arm-linux-gnueabi-gcc-4.7 -shared -Wl,-soname,libz.so.1,--version-script,zlib.map
-CPP=arm-linux-gnueabi-gcc-4.7 -E
+LDSHARED=arm-linux-gnueabihf-gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map
+CPP=arm-linux-gnueabihf-gcc -E
 
 STATICLIB=libz.a
 SHAREDLIB=libz.so
@@ -36,9 +36,9 @@ SHAREDLIBV=libz.so.1.2.11
 SHAREDLIBM=libz.so.1
 LIBS=$(STATICLIB) $(SHAREDLIBV)
 
-AR=arm-linux-gnueabi-gcc-ar-4.7
+AR=arm-linux-gnueabihf-gcc-ar-5
 ARFLAGS=rc
-RANLIB=arm-linux-gnueabi-gcc-ranlib-4.7
+RANLIB=arn-linux-gnueabihf-gcc-ranlib
 LDCONFIG=ldconfig
 LDSHAREDLIBC=-lc
 TAR=tar

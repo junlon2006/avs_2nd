@@ -12,5 +12,5 @@ Description: C Utility Library
 Version: 2.58.0
 Requires.private: libpcre
 Libs: -L${libdir} -lglib-2.0 
-Libs.private: -pthread  /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib/libpcre.a    
+Libs.private: -pthread  -L/home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/usr/lib -lpcre    
 Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include 

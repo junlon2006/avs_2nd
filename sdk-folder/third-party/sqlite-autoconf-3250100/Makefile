@@ -247,12 +247,12 @@ AR = ar
 AUTOCONF = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/sqlite-autoconf-3250100/missing autoconf
 AUTOHEADER = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/sqlite-autoconf-3250100/missing autoheader
 AUTOMAKE = ${SHELL} /home/junlon2006/workspace/amazon/avs_2rd/sdk-folder/third-party/sqlite-autoconf-3250100/missing automake-1.15
-AWK = mawk
+AWK = gawk
 BUILD_CFLAGS =  -D_REENTRANT=1 -DSQLITE_THREADSAFE=1 -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_JSON1 -DSQLITE_ENABLE_RTREE
-CC = arm-linux-gnueabi-gcc-4.7
+CC = arm-linux-gnueabihf-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
-CPP = arm-linux-gnueabi-gcc-4.7 -E
+CPP = arm-linux-gnueabihf-gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.25.1\" -DPACKAGE_STRING=\"sqlite\ 3.25.1\" -DPACKAGE_BUGREPORT=\"http://www.sqlite.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"sqlite\" -DVERSION=\"3.25.1\" -D_FILE_OFFSET_BITS=64 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_FDATASYNC=1 -DHAVE_USLEEP=1 -DHAVE_LOCALTIME_R=1 -DHAVE_GMTIME_R=1 -DHAVE_DECL_STRERROR_R=1 -DHAVE_STRERROR_R=1 -DHAVE_POSIX_FALLOCATE=1 -DHAVE_ZLIB_H=1
@@ -273,7 +273,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/arm-linux-gnueabi/bin/ld
+LD = /usr/arm-linux-gnueabihf/bin/ld
 LDFLAGS = 
 LIBOBJS = 
 LIBS = -lm -ldl -lpthread 

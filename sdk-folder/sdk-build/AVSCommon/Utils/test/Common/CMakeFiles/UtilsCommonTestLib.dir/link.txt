@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc libUtilsCommonTestLib.a  CMakeFiles/UtilsCommonTestLib.dir/MockMediaPlayer.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib libUtilsCommonTestLib.a

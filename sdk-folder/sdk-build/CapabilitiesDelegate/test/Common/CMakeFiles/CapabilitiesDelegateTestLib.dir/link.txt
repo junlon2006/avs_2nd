@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc libCapabilitiesDelegateTestLib.a  CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableAuthDelegate.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableCapabilityProvider.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableHttpPut.cpp.o CMakeFiles/CapabilitiesDelegateTestLib.dir/TestableMiscStorage.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib libCapabilitiesDelegateTestLib.a
